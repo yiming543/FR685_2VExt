@@ -1,0 +1,14 @@
+# ninja log v7
+73	7600	8141627575868265	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/lamp.c.p1	42c0ac9fdecc5965
+328	4492	8141646339101058	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/device_config.c.p1	f52c048ed4176c08
+138	4751	8141652457659901	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/LINDrivers/lin_slave.c.p1	5a25bfbb0925946f
+24	8425	8141627575377510	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/gpio.c.p1	3374adc4ee5f697c
+55	4507	8141652456789215	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/LINDrivers/lin_app.c.p1	6ea70ba248011411
+634	8979	8141627581463511	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/eusart.c.p1	10a9087aba870c8
+859	9110	8141627583735759	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/pin_manager.c.p1	8bb8e844c73ca167
+13	4553	8141652456359213	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/main.c.p1	4b50430850f45a07
+945	9177	8141627584620829	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/tmr0.c.p1	a7c43647d1f29f9
+265	4153	8141652458879488	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/interrupt_manager.c.p1	2503e31354e54dab
+384	4853	8141652460129636	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/mcc_generated_files/mcc.c.p1	e797c0a703dd5009
+1004	9686	8141627585165155	CMakeFiles/F150_RX_V01_default_default_XC8_compile.dir/D_/yiming/00work/FR685V2_V08_1.X/uart_rx_guard.c.p1	688f3499591f9f5a
+4853	12963	8141652504759669	D:/yiming/00work/FR685V2_V08_1.X/out/F150_RX_V01/default.elf	42ec0393c1015408
