@@ -57,7 +57,7 @@
 // 開啟wdt dog,避免被干擾.
 // 新增TX狀態判斷和處理.
 
-//20261021 FR685V2_V10 CS:C4B1
+//20261021 FR685_2VExt_V10 CS:C4B1
 //add 11 08 led off
 //01 08 改裝燈會先led off,但KD件是用PWM控制這時PWM還有信號所以POS會持續亮著連到PWM消失.
 //case LOBEAM_DAY_P: 漏掉,這次補上.(近燈白天晚上命令不同，都要處理)
