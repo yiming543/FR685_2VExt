@@ -1,0 +1,417 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"24 board.c
+[; ;board.c: 24: extern uint8_t ID_10_Data[8];
+[v _ID_10_Data `uc ~T0 @X0 -> 0 `x e ]
+"15 ./gpio.h
+[; ;./gpio.h: 15: extern void LOBEAM_OFF(void) ;
+[v _LOBEAM_OFF `(v ~T0 @X0 0 ef ]
+"18
+[; ;./gpio.h: 18: extern void DRL_POS_OFF(void) ;
+[v _DRL_POS_OFF `(v ~T0 @X0 0 ef ]
+"16
+[; ;./gpio.h: 16: extern void DRL_ON(void) ;
+[v _DRL_ON `(v ~T0 @X0 0 ef ]
+"17
+[; ;./gpio.h: 17: extern void POS_ON(void) ;
+[v _POS_ON `(v ~T0 @X0 0 ef ]
+"14
+[; ;./gpio.h: 14: extern void LOBEAM_ON(void) ;
+[v _LOBEAM_ON `(v ~T0 @X0 0 ef ]
+"140 board.c
+[; ;board.c: 140:     }
+[c E46 49 113 41 105 50 114 42 106 180 180 44 108 51 51 43 43 .. ]
+[n E46 . OFF_NIGHT_P OFF_NIGHT_N OFF_DAY_P OFF_DAY_N DRIVER_NIGHT_P DRIVER_NIGHT_N DRIVER_DAY_P DRIVER_DAY_N AUTO_NIGHT_P AUTO_NIGHT_N AUTO_DAY_P AUTO_DAY_N LOBEAM_NIGHT_P LOBEAM_NIGHT_N LOBEAM_DAY_P LOBEAM_DAY_N  ]
+"12 ./gpio.h
+[; ;./gpio.h: 12: extern void HIBEAM_ON(void) ;
+[v _HIBEAM_ON `(v ~T0 @X0 0 ef ]
+"13
+[; ;./gpio.h: 13: extern void HIBEAM_OFF(void) ;
+[v _HIBEAM_OFF `(v ~T0 @X0 0 ef ]
+"60 board.c
+[; ;board.c: 60: void feedbacksignal(uint8_t *data) {
+[v _feedbacksignal `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _feedbacksignal ]
+[v _data `*uc ~T0 @X0 1 r1 ]
+[f ]
+"66
+[; ;board.c: 66:     ID_10_Data[1] = data[1] & 0x07;
+[e = *U + &U _ID_10_Data * -> -> -> 1 `i `ui `ux -> -> # *U &U _ID_10_Data `ui `ux -> & -> *U + _data * -> -> 1 `i `x -> -> # *U _data `i `x `i -> 7 `i `uc ]
+"68
+[; ;board.c: 68: }
+[e :UE 1 ]
+}
+"70
+[; ;board.c: 70: void lamp(uint8_t *tempRxData) {
+[v _lamp `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _lamp ]
+[v _tempRxData `*uc ~T0 @X0 1 r1 ]
+[f ]
+"71
+[; ;board.c: 71:   if (tempRxData[0] == 0x24) {
+[e $ ! == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 36 `i 3  ]
+{
+"72
+[; ;board.c: 72:     switch (tempRxData[2]) {
+[e $U 5  ]
+{
+"73
+[; ;board.c: 73:     case OFF_NIGHT_P:
+[e :U 6 ]
+"74
+[; ;board.c: 74:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"75
+[; ;board.c: 75:       DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"76
+[; ;board.c: 76:       break;
+[e $U 4  ]
+"78
+[; ;board.c: 78:     case OFF_NIGHT_N:
+[e :U 7 ]
+"79
+[; ;board.c: 79:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"80
+[; ;board.c: 80:       DRL_ON();
+[e ( _DRL_ON ..  ]
+"81
+[; ;board.c: 81:       break;
+[e $U 4  ]
+"83
+[; ;board.c: 83:     case OFF_DAY_P:
+[e :U 8 ]
+"84
+[; ;board.c: 84:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"85
+[; ;board.c: 85:       DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"86
+[; ;board.c: 86:       break;
+[e $U 4  ]
+"88
+[; ;board.c: 88:     case OFF_DAY_N:
+[e :U 9 ]
+"89
+[; ;board.c: 89:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"90
+[; ;board.c: 90:       DRL_ON();
+[e ( _DRL_ON ..  ]
+"91
+[; ;board.c: 91:       break;
+[e $U 4  ]
+"93
+[; ;board.c: 93:     case DRIVER_NIGHT_P:
+[e :U 10 ]
+"94
+[; ;board.c: 94:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"95
+[; ;board.c: 95:       POS_ON();
+[e ( _POS_ON ..  ]
+"96
+[; ;board.c: 96:       break;
+[e $U 4  ]
+"98
+[; ;board.c: 98:     case DRIVER_NIGHT_N:
+[e :U 11 ]
+"99
+[; ;board.c: 99:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"100
+[; ;board.c: 100:       DRL_ON();
+[e ( _DRL_ON ..  ]
+"101
+[; ;board.c: 101:       break;
+[e $U 4  ]
+"103
+[; ;board.c: 103:     case DRIVER_DAY_P:
+[e :U 12 ]
+"104
+[; ;board.c: 104:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"105
+[; ;board.c: 105:       POS_ON();
+[e ( _POS_ON ..  ]
+"106
+[; ;board.c: 106:       break;
+[e $U 4  ]
+"108
+[; ;board.c: 108:     case DRIVER_DAY_N:
+[e :U 13 ]
+"109
+[; ;board.c: 109:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"110
+[; ;board.c: 110:       DRL_ON();
+[e ( _DRL_ON ..  ]
+"111
+[; ;board.c: 111:       break;
+[e $U 4  ]
+"113
+[; ;board.c: 113:     case AUTO_NIGHT_P:
+[e :U 14 ]
+"115
+[; ;board.c: 115:       LOBEAM_ON();
+[e ( _LOBEAM_ON ..  ]
+"116
+[; ;board.c: 116:       POS_ON();
+[e ( _POS_ON ..  ]
+"117
+[; ;board.c: 117:       break;
+[e $U 4  ]
+"119
+[; ;board.c: 119:     case AUTO_DAY_P:
+[e :U 15 ]
+"120
+[; ;board.c: 120:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"121
+[; ;board.c: 121:       DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"122
+[; ;board.c: 122:       break;
+[e $U 4  ]
+"124
+[; ;board.c: 124:     case AUTO_DAY_N:
+[e :U 16 ]
+"125
+[; ;board.c: 125:       LOBEAM_OFF();
+[e ( _LOBEAM_OFF ..  ]
+"126
+[; ;board.c: 126:       DRL_ON();
+[e ( _DRL_ON ..  ]
+"127
+[; ;board.c: 127:       break;
+[e $U 4  ]
+"129
+[; ;board.c: 129:     case LOBEAM_NIGHT_P:
+[e :U 17 ]
+"130
+[; ;board.c: 130:     case LOBEAM_DAY_P:
+[e :U 18 ]
+"133
+[; ;board.c: 133:       LOBEAM_ON();
+[e ( _LOBEAM_ON ..  ]
+"134
+[; ;board.c: 134:       POS_ON();
+[e ( _POS_ON ..  ]
+"135
+[; ;board.c: 135:       break;
+[e $U 4  ]
+"137
+[; ;board.c: 137:     default:
+[e :U 19 ]
+"139
+[; ;board.c: 139:       break;
+[e $U 4  ]
+"140
+[; ;board.c: 140:     }
+}
+[e $U 4  ]
+[e :U 5 ]
+[e [\ *U + _tempRxData * -> -> 2 `i `x -> -> # *U _tempRxData `i `x , $ . `E46 0 6
+ , $ . `E46 1 7
+ , $ . `E46 2 8
+ , $ . `E46 3 9
+ , $ . `E46 4 10
+ , $ . `E46 5 11
+ , $ . `E46 6 12
+ , $ . `E46 7 13
+ , $ . `E46 8 14
+ , $ . `E46 10 15
+ , $ . `E46 11 16
+ , $ . `E46 12 17
+ , $ . `E46 14 18
+ 19 ]
+[e :U 4 ]
+"142
+[; ;board.c: 142:     if (tempRxData[1] & 0xC0) {
+[e $ ! != & -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 192 `i -> 0 `i 20  ]
+{
+"143
+[; ;board.c: 143:       HIBEAM_ON();
+[e ( _HIBEAM_ON ..  ]
+"144
+[; ;board.c: 144:     }
+}
+[e :U 20 ]
+"146
+[; ;board.c: 146:   } else if ((tempRxData[0] == 0x01) && (tempRxData[1] == 0x08))
+}
+[e $U 21  ]
+[e :U 3 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 1 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 8 `i 22  ]
+"147
+[; ;board.c: 147:   {
+{
+"148
+[; ;board.c: 148:     DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"149
+[; ;board.c: 149:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x08))
+}
+[e $U 23  ]
+[e :U 22 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 8 `i 24  ]
+"150
+[; ;board.c: 150:   {
+{
+"151
+[; ;board.c: 151:     DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"152
+[; ;board.c: 152:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x09))
+}
+[e $U 25  ]
+[e :U 24 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 9 `i 26  ]
+"153
+[; ;board.c: 153:   {
+{
+"154
+[; ;board.c: 154:     POS_ON();
+[e ( _POS_ON ..  ]
+"155
+[; ;board.c: 155:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x0A))
+}
+[e $U 27  ]
+[e :U 26 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 10 `i 28  ]
+"156
+[; ;board.c: 156:   {
+{
+"157
+[; ;board.c: 157:     POS_ON();
+[e ( _POS_ON ..  ]
+"158
+[; ;board.c: 158:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x0D))
+}
+[e $U 29  ]
+[e :U 28 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 13 `i 30  ]
+"159
+[; ;board.c: 159:   {
+{
+"160
+[; ;board.c: 160:     POS_ON();
+[e ( _POS_ON ..  ]
+"161
+[; ;board.c: 161:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x0B))
+}
+[e $U 31  ]
+[e :U 30 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 11 `i 32  ]
+"162
+[; ;board.c: 162:   {
+{
+"163
+[; ;board.c: 163:     POS_ON();
+[e ( _POS_ON ..  ]
+"164
+[; ;board.c: 164:   } else if ((tempRxData[0] == 0x11) && (tempRxData[1] == 0x0C))
+}
+[e $U 33  ]
+[e :U 32 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 17 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 12 `i 34  ]
+"165
+[; ;board.c: 165:   {
+{
+"166
+[; ;board.c: 166:     POS_ON();
+[e ( _POS_ON ..  ]
+"167
+[; ;board.c: 167:   } else if ((tempRxData[0] == 0x28) && (tempRxData[1] == 0x08))
+}
+[e $U 35  ]
+[e :U 34 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 40 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 8 `i 36  ]
+"168
+[; ;board.c: 168:   {
+{
+"169
+[; ;board.c: 169:     DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"170
+[; ;board.c: 170:   } else if ((tempRxData[0] == 0x31) && (tempRxData[1] == 0x0A))
+}
+[e $U 37  ]
+[e :U 36 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 49 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 10 `i 38  ]
+"171
+[; ;board.c: 171:   {
+{
+"172
+[; ;board.c: 172:     POS_ON();
+[e ( _POS_ON ..  ]
+"173
+[; ;board.c: 173:   } else if ((tempRxData[0] == 0x31) && (tempRxData[1] == 0x0B))
+}
+[e $U 39  ]
+[e :U 38 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 49 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 11 `i 40  ]
+"174
+[; ;board.c: 174:   {
+{
+"175
+[; ;board.c: 175:   } else if ((tempRxData[0] == 0x31) && (tempRxData[1] == 0x0C))
+}
+[e $U 41  ]
+[e :U 40 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 49 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 12 `i 42  ]
+"176
+[; ;board.c: 176:   {
+{
+"177
+[; ;board.c: 177:   } else if ((tempRxData[0] == 0x31) && (tempRxData[1] == 0x08))
+}
+[e $U 43  ]
+[e :U 42 ]
+[e $ ! && == -> *U + _tempRxData * -> -> 0 `i `x -> -> # *U _tempRxData `i `x `i -> 49 `i == -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 8 `i 44  ]
+"178
+[; ;board.c: 178:   {
+{
+"179
+[; ;board.c: 179:     DRL_POS_OFF();
+[e ( _DRL_POS_OFF ..  ]
+"180
+[; ;board.c: 180:   } else {
+}
+[e $U 45  ]
+[e :U 44 ]
+{
+"182
+[; ;board.c: 182:   }
+}
+[e :U 45 ]
+[e :U 43 ]
+[e :U 41 ]
+[e :U 39 ]
+[e :U 37 ]
+[e :U 35 ]
+[e :U 33 ]
+[e :U 31 ]
+[e :U 29 ]
+[e :U 27 ]
+[e :U 25 ]
+[e :U 23 ]
+[e :U 21 ]
+"184
+[; ;board.c: 184:   if ((tempRxData[1] & 0xC0) == 0) {
+[e $ ! == & -> *U + _tempRxData * -> -> 1 `i `x -> -> # *U _tempRxData `i `x `i -> 192 `i -> 0 `i 46  ]
+{
+"185
+[; ;board.c: 185:     HIBEAM_OFF();
+[e ( _HIBEAM_OFF ..  ]
+"186
+[; ;board.c: 186:   }
+}
+[e :U 46 ]
+"187
+[; ;board.c: 187: }
+[e :UE 2 ]
+}
