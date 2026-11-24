@@ -71,7 +71,7 @@
 // 修正ID=00 ,10,door,00,FF,FF,FF,FF,FF
 // 修正斷線時hiBeam off,drl off,pos on.
 // 接收ID=01 設定燈動作，收到ID=00 只改門狀態，不設定燈動作。
-// MISRA 2012:MCC 警告61個
+// MISRA 2012:MCC 警告60個
 
 #include "board.h"
 #include "mcc_generated_files/LINDrivers/lin_slave.h"
