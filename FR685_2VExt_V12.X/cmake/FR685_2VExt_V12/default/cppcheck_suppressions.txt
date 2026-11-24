@@ -1,0 +1,5 @@
+// 忽略所有 MCC 自動產生檔案的 MISRA 警告
+misra-c2012-19.2:mcc_generated_files/LINDrivers/lin_slave.h
+misra-c2012-19.2:mcc_generated_files\LINDrivers\lin_slave.h
+misra-c2012-19.2:mcc_generated_files/eusart.h
+misra-c2012-19.2:mcc_generated_files\eusart.h

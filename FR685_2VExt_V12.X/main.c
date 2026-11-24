@@ -1,0 +1,103 @@
+/**
+  Generated Main Source File
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    main.c
+
+  Summary:
+    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+  Description:
+    This header file provides implementations for driver APIs for all modules
+  selected in the GUI. Generation Information : Product Revision  :  PIC10 /
+  PIC12 / PIC16 / PIC18 MCUs - 1.81.8 Device            :  PIC16F1936 Driver
+  Version    :  2.00
+ */
+
+// 20260505 F150_RX_V01 CS:8C60
+// LED1 POS
+// LED2 DRL
+// LED3 lo beam
+// LED3 hi beam
+
+// 20260519 F150_XLT_RX_V02  CS:D96E
+// 找出更詳細的控制條件
+
+// 20260520 F150_XLT_RX_V03  CS:33DA
+// 程式重構，修正成 switch case 的形式
+
+// 20260522 F150_XLT_RX_V04  CS:A008
+// 取消接收指示燈，增加左右方向燈
+
+// 20260831 FR685_V05 CS:AA8B
+// 1.更名FR685_V05
+// 2.更新功能只收Hibeam和超車信號
+// 3.消除編譯的警告
+// 4.2秒沒收到正確信號關閉Hibeam和超車
+// 5.31 08 LED OFF.
+
+// 20260916 FR685V2_V06 CS:3912
+// 1.新增POS燈控制，DRL/POS互斥
+// 2.新增LOBEAM燈控制，LOBEAM/POS互斥
+// 3.新增gpio.c gpio.h
+
+// 20261012 FR685V2_V08 CS:8146
+// 新增LIN RX後TX功能 lin_slave.c
+// 新增LIN RX後TX功能 回饋信號和點燈 lamp.c
+// KD件會依RX PID(0x80) lock/unlock/door state 回饋信號
+// KD件會依RX PID(0xC1) 點燈
+// 新增PIN RC5 電阻對地是R邊(Lamp_R_EN_PORT)，電阻接5V是L邊.
+// 新增unlock時, POS燈亮，lock時，POS燈滅
+
+// 20261020 FR685V2_V09 CS:C87F
+// 新增uart_rx_guard.c & uart_rx_guard.h 防止接收溢位.
+// 開啟wdt dog,避免被干擾.
+// 新增TX狀態判斷和處理.
+
+// 20261021 FR685_2VExt_V10 CS:C4B1
+// add 11 08 led off
+// 01 08 改裝燈會先led off,但KD件是用PWM控制這時PWM還有信號所以POS會持續亮著連到PWM消失.
+// case LOBEAM_DAY_P: 漏掉,這次補上.(近燈白天晚上命令不同，都要處理)
+// 引擎熄火(31 08)亮POS與KD件一致.
+
+// 20261118 FR685_2VExt_V11 CS:3824
+// 修正回傳訊號問題:原本單邊回傳兩邊的信號，改成單邊只回自己的信號。
+
+// 20261123 FR685_2VExt_V12 CS:0D24
+// 重構LED/main/warning_message/lamp/board/lin_app
+// 修正ID=00 ,10,door,00,FF,FF,FF,FF,FF
+// 修正斷線時hiBeam off,drl off,pos on.
+// 接收ID=01 設定燈動作，收到ID=00 只改門狀態，不設定燈動作。
+// MISRA 2012:MCC 警告61個
+
+#include "board.h"
+#include "mcc_generated_files/LINDrivers/lin_slave.h"
+#include "mcc_generated_files/mcc.h"
+
+/*
+                         Main application
+ */
+int main(void) {
+    // initialize the device
+    SYSTEM_Initialize();
+    board_init();
+
+    // Enable the Global Interrupts
+    INTERRUPT_GlobalInterruptEnable();
+    // Enable the Peripheral Interrupts
+    INTERRUPT_PeripheralInterruptEnable();
+
+    while (1) {
+        // Add your application code
+        CLRWDT(); // 2 second
+        lin_rx_state_t tmp_handler = LIN_handler();
+        board_updata();
+    }
+    return 0;
+}
+/**
+ End of File
+ */

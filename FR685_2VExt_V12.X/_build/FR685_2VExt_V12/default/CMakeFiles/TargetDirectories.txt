@@ -1,0 +1,4 @@
+D:/yiming/00work/FR685_2VExt_V12.X/_build/FR685_2VExt_V12/default/CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir
+D:/yiming/00work/FR685_2VExt_V12.X/_build/FR685_2VExt_V12/default/CMakeFiles/FR685_2VExt_V12_default_image_z6Bt83yR.dir
+D:/yiming/00work/FR685_2VExt_V12.X/_build/FR685_2VExt_V12/default/CMakeFiles/edit_cache.dir
+D:/yiming/00work/FR685_2VExt_V12.X/_build/FR685_2VExt_V12/default/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "XC8 PIC16F1936",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/mcc_generated_files",
+                "C:/Program Files/Microchip/xc8/v3.10/pic/include",
+                "C:/Program Files/Microchip/xc8/v3.10/pic/include/c99",
+                "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.9.258/xc8/pic/include",
+                "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.9.258/xc8/pic/include/proc"
+            ],
+            "defines": [
+                "XPRJ_default=default",
+                "__XC8",
+                "__PICC__",
+                "_16F1936",
+                "__16F1936__"
+            ],
+            "compilerPath": "",
+            "cStandard": "c99",
+            "compileCommands": [
+                "${workspaceFolder}/_build/FR685_TX_V02/default/compile_commands.json"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,16 @@
+# ninja log v7
+6383	14763	8171851796078584	D:/yiming/00work/FR685_2VExt_V12.X/out/FR685_2VExt_V12/default.elf	731e0aca8d966f60
+624	5680	8172011217758313	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/device_config.c.p1	5c3e69be0be08c5e
+113	5774	8172011212602593	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/Warning_ignored.c.p1	dd1d4d0a04540cef
+43	6396	8172011211904719	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/LED.c.p1	ea99f36e9eb1c08a
+236	6503	8172011213846072	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/board.c.p1	791213d734606790
+420	6513	8172011215656287	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/LINDrivers/lin_app.c.p1	db756a8917e51cdd
+317	6575	8172011214628472	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/main.c.p1	1a5b87ad48300d76
+510	6631	8172011216546282	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/LINDrivers/lin_slave.c.p1	f675d6f2776aa7bc
+757	6637	8172011219030464	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/eusart.c.p1	da98e1441de78896
+915	6917	8172011220614159	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/mcc.c.p1	2625851c673727a3
+1141	7318	8172011222869637	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/uart_rx_guard.c.p1	d89e3f92d0d4a44e
+830	7337	8172011219778101	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/interrupt_manager.c.p1	ebc7c390080c7fd4
+989	7399	8172011221336808	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/pin_manager.c.p1	1681886b12dd42d6
+1069	7463	8172011222140610	CMakeFiles/FR685_2VExt_V12_default_default_XC8_compile.dir/D_/yiming/00work/FR685_2VExt_V12.X/mcc_generated_files/tmr0.c.p1	6bae25601315bfc0
+7463	18204	8172011286184845	D:/yiming/00work/FR685_2VExt_V12.X/out/FR685_2VExt_V12/default.elf	731e0aca8d966f60

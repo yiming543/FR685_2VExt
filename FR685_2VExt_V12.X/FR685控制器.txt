@@ -1,0 +1,18 @@
+關燈信號3組(獨立)
+1.lock 01 08
+2.unlock+time out 11 08
+3.engin off + time out 31 08
+
+Hi Beam 1組(獨立)
+unlock 1組(獨立)
+
+左方向(獨立)
+右方向(獨立)
+
+day/night 1組(配合)
+N/P 1組(配合)
+模式 4組(配合)
+1.off
+2.pos
+3.auto
+4.Lo Beam
